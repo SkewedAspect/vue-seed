@@ -1,0 +1,14 @@
+{
+  "name": "vue-seed",
+  "version": "0.0.0",
+  "authors": [
+    "Christopher S. Case <chris.case@g33xnexus.com>"
+  ],
+  "private": true,
+  "dependencies": {
+    "bootstrap": "4.0.0-alpha.2",
+    "font-awesome": "~4.4.0",
+    "jquery": "~2.1.4",
+    "tether": "~1.1.1"
+  }
+}

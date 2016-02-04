@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+        <!-- Mobile Chrome address bar Color -->
+        <meta name="theme-color" content="#000000">
+
+        <!-- iOS Web App tags -->
+        <meta name=apple-mobile-web-app-capable content=yes>
+
+        <title>VueSeed</title>
+
+        <!-- Icons -->
+        <link rel="apple-touch-icon" sizes="192x192" href="/static/images/logo.png">
+        <link rel="icon" sizes="192x192" href="/static/images/logo.png">
+
+        <!-- Bower Components -->
+        <script src="/vendor/jquery/dist/jquery.min.js"></script>
+        <script src="/vendor/tether/dist/js/tether.min.js"></script>
+        <script src="/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+        <link href="/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+        <!-- App Style -->
+        <link href="/css/app.css" rel="stylesheet">
+    </head>
+    <body class="container-fluid">
+        <div id="main-app">
+            <site-header></site-header>
+            <router-view></router-view>
+            <site-footer></site-footer>
+        </div>
+
+        <!-- App Scripts -->
+        <script src="/app.js"></script>
+    </body>
+</html>

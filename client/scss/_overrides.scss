@@ -1,0 +1,75 @@
+//----------------------------------------------------------------------------------------------------------------------
+// Overrides
+//----------------------------------------------------------------------------------------------------------------------
+
+.monospace {
+    font-family: monospace;
+}
+
+.hidden-print {
+    @media print {
+        display: none;
+    }
+}
+
+.no-click {
+    pointer-events: none;
+}
+
+hr.sm {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+//----------------------------------------------------------------------------------------------------------------------
+// Bootstrap Overrides
+//----------------------------------------------------------------------------------------------------------------------
+
+// Original Bootstrap's CSS depends on empty href attributes to style cursors for several components (pagination, tabs
+// etc.)
+.nav,
+.pagination,
+.carousel,
+.panel-title a {
+    cursor: pointer;
+}
+
+.btn:focus, input:focus, textarea:focus {
+    outline: none !important;
+}
+
+code {
+    background-color: rgba(0,0,0,0.06);
+    font-size: 80%;
+    color: rgb(102, 102, 102);
+    border-radius: 4px;
+}
+
+.card {
+    .card-header .card-title {
+        margin: 0;
+    }
+}
+
+form {
+    fieldset {
+        label {
+            font-weight: bold;
+        }
+    }
+}
+
+// I don't really get their new system.
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-left {
+    text-align: left;
+}
+
+//----------------------------------------------------------------------------------------------------------------------
