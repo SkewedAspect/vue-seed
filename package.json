@@ -36,6 +36,7 @@
     "grunt-contrib-watch": "^0.6.1",
     "grunt-postcss": "^0.7.1",
     "grunt-sass": "^1.1.0",
+    "node-sass": "^3.4.2",
     "omega-logger": "^0.6.7",
     "vue-hot-reload-api": "^1.2.2",
     "vueify": "^7.2.0",
