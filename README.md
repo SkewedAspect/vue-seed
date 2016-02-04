@@ -9,5 +9,6 @@ Putting aside as much baggage and opinion as possible.
 ```
 npm install   
 bower install   
+grunt
 node server.js 
 ```
