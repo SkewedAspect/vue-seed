@@ -1,0 +1,15 @@
+.DS_Store
+
+# IntelliJ artifacts
+.idea
+
+# Build artifacts
+.cache
+dist
+
+# Node artifacts
+node_modules
+
+# Database
+db/*.sqlite
+db/*.db*
