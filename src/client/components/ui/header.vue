@@ -6,12 +6,16 @@
     <b-navbar toggleable="md" type="dark" variant="dark" sticky>
         <b-navbar-brand to="/">
             <img src="../../../assets/images/logo.png" height="32px" style="display: inline-block; margin-top: -5px"  alt="logo"/>
-            Palaver
+            Vue-Seed
         </b-navbar-brand>
         <b-navbar-nav>
-            <b-nav-item to="/dashboard">
-                <fa icon="columns"></fa>
-                Dashboard
+            <b-nav-item to="/">
+                Home
+            </b-nav-item>
+        </b-navbar-nav>
+        <b-navbar-nav class="ml-auto">
+            <b-nav-item to="/about">
+                About
             </b-nav-item>
         </b-navbar-nav>
     </b-navbar>
@@ -34,3 +38,4 @@
 </script>
 
 <!--------------------------------------------------------------------------------------------------------------------->
+
