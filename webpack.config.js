@@ -11,11 +11,11 @@ const VueLoaderPlugin = require('vue-loader/lib/plugin');
 
 module.exports = {
     devtool: 'source-map',
-    entry: './renderer/app.ts',
-    target: 'electron-renderer',
+    entry: './src/client/app.ts',
+    mode: 'development',
     output: {
         filename: 'app.js',
-        path: path.resolve(__dirname, 'dist', 'renderer')
+        path: path.resolve(__dirname, 'dist', 'client')
     },
     resolve: {
         // Add `.ts` and `.tsx` as a resolvable extension.
