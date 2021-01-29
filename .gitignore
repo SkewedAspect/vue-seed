@@ -1,14 +1,14 @@
+# OS artifacts
 .DS_Store
 
-# IntelliJ artifacts
-.idea
-
-# VS artifacts
+# IDE artifacts
 .vs
 .vscode
+.idea
 
 # Build artifacts
 .cache
+.eslintcache
 dist
 
 # Node artifacts
