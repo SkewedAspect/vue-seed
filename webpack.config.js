@@ -3,9 +3,11 @@
 //----------------------------------------------------------------------------------------------------------------------
 
 const path = require('path');
+const webpack = require('webpack');
 
 // Plugins
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 //----------------------------------------------------------------------------------------------------------------------
 
@@ -24,13 +26,6 @@ module.exports = {
     },
     module: {
         rules: [
-            {
-                test: /index\.html/,
-                loader: 'file-loader',
-                options: {
-                    name: '[name].[ext]'
-                }
-            },
             {
                 test: /\.(png|jpe?g|gif)$/i,
                 use: [
@@ -77,7 +72,15 @@ module.exports = {
         ]
     },
     plugins: [
-        new VueLoaderPlugin()
+        new VueLoaderPlugin(),
+        new webpack.DefinePlugin({
+            'process.env.VERSION': JSON.stringify(require('./package.json').version)
+        }),
+        new HtmlWebpackPlugin({
+            title: 'Vue-Seed',
+            favicon: './src/assets/images/logo.png',
+            template: './src/client/index.html'
+        })
     ],
     devServer: {
         writeToDisk: true

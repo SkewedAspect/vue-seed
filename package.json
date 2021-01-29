@@ -11,7 +11,7 @@
     "start": "ts-node src/server.ts",
     "dev": "webpack --watch --progress --config webpack.config.js",
     "build": "tsc && webpack --config webpack.config.js",
-    "lint": "eslint --fix --ext .ts, js webpack.config.js src/"
+    "lint": "eslint --fix --ext .ts webpack.config.js src/"
   },
   "dependencies": {},
   "devDependencies": {
@@ -31,6 +31,7 @@
     "express": "^4.17.1",
     "file-loader": "^6.2.0",
     "helmet": "^4.4.0",
+    "html-webpack-plugin": "^4.5.1",
     "node-sass": "^5.0.0",
     "rimraf": "^3.0.2",
     "sass-loader": "^10.1.1",

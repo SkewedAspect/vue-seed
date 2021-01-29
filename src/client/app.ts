@@ -22,9 +22,6 @@ import App from './app.vue';
 import HomePage from './pages/home.vue';
 import AboutPage from './pages/about.vue';
 
-// HTML
-import './index.html';
-
 // Site Style
 import './scss/theme.scss';
 

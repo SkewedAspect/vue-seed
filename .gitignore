@@ -3,6 +3,10 @@
 # IntelliJ artifacts
 .idea
 
+# VS artifacts
+.vs
+.vscode
+
 # Build artifacts
 .cache
 dist

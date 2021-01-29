@@ -30,7 +30,7 @@
         data()
         {
             return {
-                version: '0.0.0'
+                version: process.env.VERSION
             };
         }
     };
