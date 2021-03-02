@@ -83,7 +83,8 @@ module.exports = {
         })
     ],
     devServer: {
-        writeToDisk: true
+        contentBase: './dist',
+        port: 8082
     }
 };
 

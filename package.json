@@ -9,11 +9,10 @@
   "scripts": {
     "clean": "rimraf dist/",
     "start": "ts-node src/server.ts",
-    "dev": "webpack --watch --progress --config webpack.config.js",
+    "dev": "webpack serve --port 8082 --config webpack.config.js",
     "build": "tsc && webpack --config webpack.config.js",
     "lint": "eslint --fix --ext .ts webpack.config.js src/"
   },
-  "dependencies": {},
   "devDependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.34",
     "@fortawesome/free-brands-svg-icons": "^5.15.2",
@@ -46,7 +45,8 @@
     "vue-router": "^3.4.9",
     "vue-template-compiler": "^2.6.12",
     "webpack": "^5.15.0",
-    "webpack-cli": "^4.3.1"
+    "webpack-cli": "^4.3.1",
+    "webpack-dev-server": "^3.11.2"
   },
   "husky": {
     "hooks": {

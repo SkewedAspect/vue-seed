@@ -5,7 +5,7 @@
 export default {
     debug: true,
     http: {
-        port: 8989
+        port: 8082
     }
 };
 
