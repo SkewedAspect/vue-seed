@@ -3,7 +3,7 @@
   --------------------------------------------------------------------------------------------------------------------->
 
 <template>
-    <div id="about-page" class="container">
+    <div id="about-page" class="container page">
         <h1>About this Project</h1>
         <p>
             This is a very simple seed project, intended to provide a framework for a functioning SPA style vue application,
@@ -19,8 +19,6 @@
 
 <style lang="scss">
     #about-page {
-        margin-top: 0.65rem;
-        margin-bottom: 0.65rem;
     }
 </style>
 
@@ -29,7 +27,13 @@
 <script lang="ts">
     //------------------------------------------------------------------------------------------------------------------
 
-    export default {};
+    import Vue from 'vue';
+
+    //------------------------------------------------------------------------------------------------------------------
+
+    export default Vue.extend({
+        name: 'HomePage'
+    });
 </script>
 
 <!--------------------------------------------------------------------------------------------------------------------->

@@ -11,7 +11,7 @@
     "start": "ts-node src/server.ts",
     "dev": "webpack serve --port 8082 --config webpack.config.js",
     "build": "tsc && webpack --config webpack.config.js",
-    "lint": "eslint --fix --ext .ts webpack.config.js src/"
+    "lint": "eslint --fix --ext .vue,.ts webpack.config.js src/"
   },
   "devDependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.34",
@@ -27,6 +27,7 @@
     "bootstrap-vue": "^2.21.2",
     "css-loader": "^5.0.1",
     "eslint": "^7.15.0",
+    "eslint-plugin-vue": "^7.7.0",
     "express": "^4.17.1",
     "file-loader": "^6.2.0",
     "helmet": "^4.4.0",
@@ -54,6 +55,6 @@
     }
   },
   "lint-staged": {
-    "*.ts": "eslint --cache --fix"
+    "*.{ts,js,vue}": "eslint --cache --fix"
   }
 }

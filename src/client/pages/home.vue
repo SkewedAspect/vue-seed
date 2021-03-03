@@ -3,7 +3,7 @@
   --------------------------------------------------------------------------------------------------------------------->
 
 <template>
-    <div id="main-page" class="container">
+    <div id="main-page" class="container page">
         <b-jumbotron header="Vue-Seed" lead="A seed project for TypeScript and Vue.js">
             <p>You will want to customize this project to fit your needs.</p>
             <b-button variant="primary" href="https://gitlab.com/morgul/vue-seed/-/blob/master/Readme.md">
@@ -36,7 +36,9 @@
             </b-card>
         </b-card-group>
 
-        <h2 class="mt-4"><fa icon="jedi"></fa> But wait, there's more!</h2>
+        <h2 class="mt-4">
+            <fa icon="jedi"></fa> But wait, there's more!
+        </h2>
         <p>
             Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In molestie,
             ex id suscipit fringilla, augue velit efficitur nunc, non faucibus lacus lectus tempor magna. In elementum
@@ -54,8 +56,6 @@
 
 <style lang="scss">
     #main-page {
-        margin-top: 0.65rem;
-        margin-bottom: 0.65rem;
     }
 </style>
 
@@ -64,7 +64,13 @@
 <script lang="ts">
     //------------------------------------------------------------------------------------------------------------------
 
-    export default {};
+    import Vue from 'vue';
+
+    //------------------------------------------------------------------------------------------------------------------
+
+    export default Vue.extend({
+        name: 'HomePage'
+    });
 </script>
 
 <!--------------------------------------------------------------------------------------------------------------------->

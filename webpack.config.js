@@ -79,11 +79,13 @@ module.exports = {
         new HtmlWebpackPlugin({
             title: 'Vue-Seed',
             favicon: './src/assets/images/logo.png',
-            template: './src/client/index.html'
+            template: './src/client/index.html',
+            publicPath: '/'
         })
     ],
     devServer: {
         contentBase: './dist',
+        historyApiFallback: true,
         port: 8082
     }
 };
