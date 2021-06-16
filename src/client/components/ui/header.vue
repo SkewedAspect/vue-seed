@@ -5,7 +5,7 @@
 <template>
     <b-navbar toggleable="md" type="dark" variant="dark" sticky>
         <b-navbar-brand to="/">
-            <img src="../../../assets/images/logo.png" height="32px" style="display: inline-block; margin-top: -5px" alt="logo" />
+            <img src="../../assets/images/logo.png" height="32px" style="display: inline-block; margin-top: -5px" alt="logo" />
             Vue-Seed
         </b-navbar-brand>
         <b-navbar-nav>

@@ -7,7 +7,6 @@ import fs from 'fs';
 import { AddressInfo } from 'net';
 
 import express from 'express';
-import bodyParser from 'body-parser';
 
 import config from './config';
 
@@ -19,7 +18,7 @@ const http : Record<string, any> = config.http as Record<string, any>;
 const app = express();
 
 // JSON Support
-app.use(bodyParser.json());
+app.use(express.json());
 
 // Setup static serving
 app.use(express.static(path.resolve(__dirname, '..', 'dist', 'client')));
