@@ -30,7 +30,7 @@
         data()
         {
             return {
-                version: process.env.VERSION
+                version: (window as any).APP_VERSION
             };
         }
     };

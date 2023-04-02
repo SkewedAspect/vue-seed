@@ -2,50 +2,76 @@
 // Vite Config
 //----------------------------------------------------------------------------------------------------------------------
 
-import path from 'path';
 import { defineConfig } from 'vite';
 
 // Vite Plugins
-import { createVuePlugin } from 'vite-plugin-vue2';
+import vue from '@vitejs/plugin-vue2';
 
-// Package
-import { version } from './package.json';
+// Config
+import config from './src/config';
 
 //----------------------------------------------------------------------------------------------------------------------
 
+/** @type {import('vite').UserConfig} */
 export default defineConfig({
     root: 'src/client',
     publicDir: 'assets',
     plugins: [
-        createVuePlugin()
+        vue()
     ],
+
+    // Remove charset warning caused by bootstrap
+    css: {
+        postcss: {
+            plugins: [
+                {
+                    postcssPlugin: 'internal:charset-removal',
+                    AtRule: {
+                        charset: (atRule) =>
+                        {
+                            if(atRule.name === 'charset')
+                            {
+                                atRule.remove();
+                            }
+                        }
+                    }
+                }
+            ]
+        }
+    },
     server: {
-        port: 8082
+        port: config.http.port + 1,
+        proxy: {
+            '/auth': `http://localhost:${ config.http.port }`,
+            '/api': `http://localhost:${ config.http.port }`,
+            '/socket.io': {
+                target: `http://localhost:${ config.http.port }`,
+                ws: true
+            }
+        },
+        https: false,
+        open: false
     },
     resolve: {
-        alias: [
-            {
-                find: /~(.+)/,
-                replacement: path.join(process.cwd(), 'node_modules/$1')
-            },
-            {
-                find: 'bootstrap-vue$',
-                replacement: 'bootstrap-vue/src/index.js'
-            },
-            {
-                find: 'vue',
-                replacement: 'vue/dist/vue.esm.js'
-            }
-        ]
-    },
-    define: {
-        APP_VERSION: JSON.stringify(version)
+        alias: {
+            'vue': 'vue/dist/vue.esm.js',
+            '@vue-bootstrap-components/vue-bootstrap-autocomplete':
+                '@vue-bootstrap-components/vue-bootstrap-autocomplete/dist/VueBootstrapAutocomplete.umd.min.js'
+        }
     },
     build: {
-        outDir: '../../dist/client',
+        outDir: '../../dist/src/client',
         emptyOutDir: true,
-        chunkSizeWarningLimit: 600,
-        cssCodeSplit: true
+        cssCodeSplit: true,
+        chunkSizeWarningLimit: 650,
+        rollupOptions: {
+            output: {
+                manualChunks: {
+                    bootstrap: [ 'popper.js', 'jquery', 'bootstrap' ],
+                    bootstrapVue: [ 'bootstrap-vue' ]
+                }
+            }
+        }
     }
 });
 
