@@ -9,6 +9,7 @@ import vue from '@vitejs/plugin-vue2';
 
 // Config
 import config from './src/config';
+import { version } from './package.json';
 
 //----------------------------------------------------------------------------------------------------------------------
 
@@ -58,6 +59,9 @@ export default defineConfig({
             '@vue-bootstrap-components/vue-bootstrap-autocomplete':
                 '@vue-bootstrap-components/vue-bootstrap-autocomplete/dist/VueBootstrapAutocomplete.umd.min.js'
         }
+    },
+    define: {
+        APP_VERSION: `"${ version }"`
     },
     build: {
         outDir: '../../dist/src/client',

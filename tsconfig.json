@@ -32,7 +32,8 @@
     "files": [
         "package.json",
         "src/server.ts",
-        "config.ts"
+        "src/config.ts",
+        "vite.config.ts"
     ],
     "exclude": [
         "node_modules"
