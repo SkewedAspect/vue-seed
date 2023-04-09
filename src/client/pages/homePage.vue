@@ -6,7 +6,7 @@
     <div id="main-page" class="container page">
         <b-jumbotron header="Vue-Seed" lead="A seed project for TypeScript and Vue.js">
             <p>You will want to customize this project to fit your needs.</p>
-            <b-button variant="primary" href="https://gitlab.com/morgul/vue-seed/-/blob/master/Readme.md">
+            <b-button variant="primary" href="https://gitlab.com/morgul/vue-seed/-/blob/master/Readme.md" target="_blank">
                 <fa-icon icon="book"></fa-icon>
                 Documentation
             </b-button>
@@ -29,9 +29,11 @@
             </b-card>
             <b-card title="Third Section">
                 <b-card-text>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis interdum nisi, non semper augue.
-                    Sed elementum luctus dolor, quis malesuada magna luctus pulvinar. Duis massa elit, accumsan sed
-                    elit et, mollis placerat velit.
+                    Here's a sample widget:
+                    <CounterWidget v-model="count" class="mt-4 mb-4"></CounterWidget>
+                    <small class="text-muted">
+                        Count is: {{ count }}
+                    </small>
                 </b-card-text>
             </b-card>
         </b-card-group>
@@ -55,6 +57,16 @@
 <!--------------------------------------------------------------------------------------------------------------------->
 
 <script lang="ts" setup>
+    import { ref } from 'vue';
+
+    // Computed
+    import CounterWidget from '../components/example/counterWidget.vue';
+
+    //------------------------------------------------------------------------------------------------------------------
+    // Refs
+    //------------------------------------------------------------------------------------------------------------------
+
+    const count = ref(2);
 </script>
 
 <!--------------------------------------------------------------------------------------------------------------------->
