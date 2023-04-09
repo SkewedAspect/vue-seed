@@ -7,7 +7,7 @@
         <b-jumbotron header="Vue-Seed" lead="A seed project for TypeScript and Vue.js">
             <p>You will want to customize this project to fit your needs.</p>
             <b-button variant="primary" href="https://gitlab.com/morgul/vue-seed/-/blob/master/Readme.md">
-                <fa icon="book"></fa>
+                <fa-icon icon="book"></fa-icon>
                 Documentation
             </b-button>
         </b-jumbotron>
@@ -37,7 +37,7 @@
         </b-card-group>
 
         <h2 class="mt-4">
-            <fa icon="jedi"></fa> But wait, there's more!
+            <fa-icon icon="jedi"></fa-icon> But wait, there's more!
         </h2>
         <p>
             Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In molestie,
@@ -54,23 +54,7 @@
 
 <!--------------------------------------------------------------------------------------------------------------------->
 
-<style lang="scss">
-    #main-page {
-    }
-</style>
-
-<!--------------------------------------------------------------------------------------------------------------------->
-
-<script lang="ts">
-    //------------------------------------------------------------------------------------------------------------------
-
-    import Vue from 'vue';
-
-    //------------------------------------------------------------------------------------------------------------------
-
-    export default Vue.extend({
-        name: 'HomePage'
-    });
+<script lang="ts" setup>
 </script>
 
 <!--------------------------------------------------------------------------------------------------------------------->

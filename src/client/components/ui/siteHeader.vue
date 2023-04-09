@@ -1,39 +1,38 @@
 <!----------------------------------------------------------------------------------------------------------------------
-  -- Footer
+  -- Site Header
   --------------------------------------------------------------------------------------------------------------------->
 
 <template>
-    <footer id="site-footer" class="container text-center">
-        <hr class="mt-0 fancy" />
-        <div class="mb-2">
-            Vue-Seed v{{ version }}
-        </div>
-    </footer>
+    <b-navbar toggleable="md" type="dark" variant="dark" sticky>
+        <b-navbar-brand to="/">
+            <img src="/images/logo.png" height="32" class="logo" alt="logo" />
+            Vue-Seed
+        </b-navbar-brand>
+        <b-navbar-nav>
+            <b-nav-item to="/">
+                Home
+            </b-nav-item>
+        </b-navbar-nav>
+        <b-navbar-nav class="ml-auto">
+            <b-nav-item to="/about">
+                About
+            </b-nav-item>
+        </b-navbar-nav>
+    </b-navbar>
 </template>
 
 <!--------------------------------------------------------------------------------------------------------------------->
 
 <style lang="scss">
-#site-footer {
-    color: #aaa;
-    font-size: 12px;
-}
+    .logo {
+        margin-top: -5px;
+    }
 </style>
 
 <!--------------------------------------------------------------------------------------------------------------------->
 
-<script lang="ts">
-    //------------------------------------------------------------------------------------------------------------------
-
-    export default {
-        name: 'SiteFooter',
-        data()
-        {
-            return {
-                version: (window as any).APP_VERSION
-            };
-        }
-    };
+<script lang="ts" setup>
 </script>
 
 <!--------------------------------------------------------------------------------------------------------------------->
+

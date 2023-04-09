@@ -19,8 +19,8 @@ import { FontAwesomeIcon, FontAwesomeLayers } from '@fortawesome/vue-fontawesome
 import App from './app.vue';
 
 // Pages
-import HomePage from './pages/home.vue';
-import AboutPage from './pages/about.vue';
+import HomePage from './pages/homePage.vue';
+import AboutPage from './pages/aboutPage.vue';
 
 // Site Style
 import './scss/theme.scss';
@@ -30,7 +30,7 @@ import './scss/theme.scss';
 // ---------------------------------------------------------------------------------------------------------------------
 
 library.add(fab, far, fas);
-Vue.component('Fa', FontAwesomeIcon);
+Vue.component('FaIcon', FontAwesomeIcon);
 Vue.component('FaLayers', FontAwesomeLayers);
 
 // ---------------------------------------------------------------------------------------------------------------------
