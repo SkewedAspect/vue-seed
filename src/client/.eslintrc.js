@@ -1,6 +1,6 @@
 module.exports = {
     extends: [
-        'plugin:vue/recommended'
+        'plugin:vue/vue3-recommended'
     ],
     parser: 'vue-eslint-parser',
     parserOptions: {
@@ -26,12 +26,13 @@ module.exports = {
         'vue/max-attributes-per-line': [
             'error', {
                 singleline: 20,
-                multiline: {
-                    max: 1,
-                    allowFirstLine: false
-                }
+                multiline: 1
             }
         ],
+        'vue/first-attribute-linebreak': [ 'error', {
+            singleline: 'ignore',
+            multiline: 'below'
+        } ],
         'vue/html-self-closing': [
             'error',
             {
@@ -64,13 +65,19 @@ module.exports = {
                 switchCase: 1,
                 ignores: []
             }
-        ]
+        ],
+
+        // Disabled because it catches html comments in between component tags
+        'vue/valid-attribute-name': 'off',
+        'vue/valid-model-definition': 'off'
+
     },
     overrides: [
         {
             files: [ '*.vue' ],
             rules: {
-                indent: 'off'
+                '@typescript-eslint/no-unused-vars': 'off',
+                'indent': 'off'
             }
         }
     ]

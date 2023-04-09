@@ -1,13 +1,11 @@
 {
     "compilerOptions": {
-        "experimentalDecorators": true,
         "incremental": true,
-        "allowJs": true,
-        "checkJs": true,
         "tsBuildInfoFile": "dist/tsbuildinfo",
-        "target": "es2020",
+        "target": "ES2020",
+        "lib": [ "ES2020", "DOM", "DOM.Iterable" ],
         "module": "commonjs",
-        "outDir": "./dist",
+        "outDir": "dist",
         "rootDir": "src",
         "strict": false,
         "strictNullChecks": true,
@@ -24,12 +22,17 @@
         "moduleResolution": "node",
         "resolveJsonModule": true,
         "esModuleInterop": true,
-        "preserveSymlinks": true
+        "allowSyntheticDefaultImports": true,
+        "preserveSymlinks": true,
+        "sourceMap": true
     },
-    "files": [
-        "src/server.ts"
-    ],
-    "exclude": [
-        "node_modules"
-    ]
+//    "files": [
+//        "package.json",
+//        "src/server.ts",
+//        "src/config.ts",
+//        "src/vue-shims.d.ts",
+//        "vite.config.ts"
+//    ],
+    "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
+    "references": [{ "path": "./tsconfig.node.json" }]
 }

@@ -1,7 +1,7 @@
 {
-  "name": "ts-seed",
-  "version": "0.1.0",
-  "description": "A simple seed project for ts code.",
+  "name": "vue-seed",
+  "version": "0.2.0",
+  "description": "A simple seed project for vue projects.",
   "main": "dist/server.js",
   "repository": "",
   "author": "Christopher S. Case<chris.case@g33xnexus.com>",
@@ -14,33 +14,31 @@
     "prepare": "husky install"
   },
   "devDependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.34",
-    "@fortawesome/free-brands-svg-icons": "^5.15.2",
-    "@fortawesome/free-regular-svg-icons": "^5.15.2",
-    "@fortawesome/free-solid-svg-icons": "^5.15.2",
+    "@fortawesome/fontawesome-svg-core": "^6.4.0",
+    "@fortawesome/free-brands-svg-icons": "^6.4.0",
+    "@fortawesome/free-regular-svg-icons": "^6.4.0",
+    "@fortawesome/free-solid-svg-icons": "^6.4.0",
     "@fortawesome/vue-fontawesome": "^2.0.2",
-    "@types/node": "^15.12.2",
-    "@typescript-eslint/eslint-plugin": "^4.9.0",
-    "@typescript-eslint/parser": "^4.9.0",
+    "@types/node": "^18.15.11",
+    "@typescript-eslint/eslint-plugin": "^5.57.1",
+    "@typescript-eslint/parser": "^5.57.1",
+    "@vitejs/plugin-vue2": "^2.2.0",
     "bootstrap": "^4.5.3",
     "bootstrap-vue": "^2.21.2",
-    "eslint": "^7.15.0",
-    "eslint-plugin-vue": "^7.7.0",
+    "eslint": "^8.38.0",
+    "eslint-plugin-vue": "^9.10.0",
     "express": "^4.17.1",
-    "husky": "^6.0.0",
-    "lint-staged": "^11.0.0",
-    "sass": "^1.35.1",
-    "typescript": "^4.1.2",
-    "vite": "^2.3.7",
-    "vite-plugin-vue2": "^1.6.2",
+    "husky": "^8.0.3",
+    "knex": "^2.4.2",
+    "lint-staged": "^13.2.1",
+    "sass": "^1.61.0",
+    "typescript": "^5.0.4",
+    "vite": "^4.2.1",
     "vue": "^2.6.12",
     "vue-router": "^3.4.9",
     "vue-template-compiler": "^2.6.12"
   },
   "lint-staged": {
     "*.{ts,js,vue}": "eslint --cache --fix"
-  },
-  "dependencies": {
-    "knex": "^0.95.6"
   }
 }
