@@ -8,5 +8,5 @@ is not designed to have a real server piece, or even default reactivity beyond w
 To get a copy of this project, simply run:
 
 ```bash
-$ npx degit gitlab:morgul/vue-seed my-proj -m=git
+$ npx tiged gitlab:morgul/vue-seed my-proj -m=git
 ```
